@@ -1,0 +1,51 @@
+body {
+    font-family: Open Sans;
+}
+
+
+div.nodisplay {
+    display: none;
+    color: white;
+}
+@keyframes thedance {
+    0% {color:red;background-color:orange; top: 0px; left: 0px;}
+    10% {color:orange;background-color:yellow; top: 300px; left: 300px;}
+    20% {color:yellow;background-color:yellowgreen; top: 0px; left: 300px;}
+    30% {color:yellowgreen;background-color:limegreen; top: 0px; left: 0px;}
+    40% {color:limegreen;background-color:green; top: 300px; left: 300px;}
+    50% {color:green;background-color:aqua; top: 0px; left: 0px;}
+    60% {color:aqua;background-color:blue; top: 300px; left: 0px;}
+    70% {color:blue;background-color:blueviolet; top: 0px; left: 0px;}
+    80% {color:blueviolet;background-color:deeppink; top: 300px; left: 300px;}
+    90% {color:deeppink;background-color:red; top: 0px; left: 0px;}
+    100% {color:red;background-color:orange; top: 300px; left: 0px;}
+}
+div.letame {
+    position: relative;
+    animation: thedance;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-size: 100px;
+    width:1.2em;
+    height:1.2em;
+    font-weight: bold;
+    text-align: center;
+     text-decoration:none ;
+    
+    
+}
+
+
+div.letame2 {
+    position: relative;
+    animation: thedance;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
+    width:50%;
+    height:50%;
+    
+    
+}

@@ -1,0 +1,13 @@
+    
+ <h3>Vítejte!</h3>
+ <br />
+ <p>
+Ahoj všichni! 
+
+Vítejte na stránkách FRTání.
+
+Tohle je příspěvek. Zde se budou objevovat novinky ze světa FRTu.
+
+Pokud máte nějaké otázky, zareguistrujte se a napište nějaký komentář pod nějakou stránku.
+</p>
+
