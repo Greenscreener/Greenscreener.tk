@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+// Overwrite some Bulma styling
+$gsgreen: #39c100;
+$gslogogreen: #486932;
+
+$primary: $gsgreen;
+$link: $gslogogreen;
+
+// Import Bulma
+@import "../bulma-0.7.1/bulma.sass";
+
+// Style
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
+.icon.is-in-li {
+  position: relative;
+  left: -1rem;
+  top: 7px;
+  width: 2rem;
+  font-size: 2rem;
+  float: left; 
+}
+ul.has-icons-left.is-size-5 > li {
+  padding-bottom: 1.5rem;
+}

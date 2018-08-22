@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Greenscreener</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+<div id="welcome" class="hero is-primary is-fullheight">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img src="./images/GSLOGO%20-%20white.svg" style="padding-bottom: 4rem;" alt="Logo" width="200px">
+            <h1 class="title is-1">Hi there!</h1>
+            <h2 class="subtitle is-3">Name's <span class="has-text-weight-bold">Greenscreener</span>, nice to meet you!</h2>
+            <div class="notification is-danger">
+                This page is UNDER CONSTRUCTION!
+            </div>
+        </div>
+    </div>
+</div>
+<div id="navbartop"></div>
+<div id="navbar" class="navbar has-shadow">
+    <div class="navbar-brand">
+        <a href="#" class="navbar-item">
+            <img src="./images/GSLOGO.svg" alt="Logo" width="28px">
+        </a>
+        <span class="navbar-burger" data-target="navbarMenu" onclick="$('#' + event.srcElement.dataset.target).toggleClass('is-active'); $(event.srcElement).toggleClass('is-active');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+    <div class="navbar-menu" id="navbarMenu">
+        <div class="navbar-start">
+
+        </div>
+        <div class="navbar-end">
+            <a href="#" class="navbar-item"> Top </a>
+            <a href="#whatIDo" class="navbar-item"> What I do </a>
+            <a href="#" class="navbar-item"> Hello </a>
+            <a href="#" class="navbar-item"> Hello </a>
+            <a href="#" class="navbar-item"> Hello </a>
+            <a href="#" class="navbar-item"> Hello </a>
+        </div>
+    </div>
+</div>
+<div id="whatIDo" class="section">
+    <div class="container">
+        <div class="columns is-gapless is-mobile">
+            <div class="column is-narrow is-hidden-tablet"><div style="width: 3rem;"> </div></div>
+            <div class="column">
+                <div class="columns is-gapless">
+                    <div class="column hero">
+                        <div class="hero-body is-flex has-text-justified-desktop has-text-centered-desktop">
+                            <h1 class="title is-vertical-center">What I do</h1>
+                        </div>
+                    </div>
+                    <div class="column hero">
+                        <div class="hero-body container is-fluid">
+                            <ul class="has-icons-left is-size-5">
+                                <li><span class="fa-li"><i class="fas fa-laptop-code fa-lg"></i></span>I mainly play with web stuff, usually useless experiments. </li>
+                                <li><span class="fa-li"><i class="fab fa-linux fa-lg"></i></span>I use and love Linux, my current daily driver is openSUSE Tumbleweed with KDE Plasma and I love it too!</li>
+                                <li><span class="fa-li"><i class="fas fa-server fa-lg"></i></span>I play around with servers and the Linux command line. I try maintaining nginx inside Docker inside an AWS EC2. I can exit vim.</li>
+                                <li><span class="fa-li"><i class="fas fa-microchip fa-lg"></i></span>I enjoy bodging electronic circuits and soldering stuff. When I find something broken, I fix it with a lot of glue and some solder.</li>
+                                <li><span class="fa-li"><i class="fas fa-music fa-lg"></i></span>I love playing the electric guitar. I play in a metal band, but I don't listen to metal. I listen to all kinds of eletronic music. TheFatRat is currently my favorite.</li>
+                                <li><span class="fa-li" id="localGuideIcon"></span> I'm a <span id="localGuideText"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="whatIveDone" class="section has-background-grey-lighter">
+    <div class="has-text-centered title"> What I've done </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <p class="title is-size-4">Hello</p>
+                            <p class="subtitle is-size-6">World</p>
+                            <p>
+                                Shennanigans
+                            </p>
+                            <p>
+                                Lorem Ipsum Dolor Sit Amet.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(window).bind("scroll", function () {
+            if ($(window).scrollTop() > $("#navbartop").position().top) {
+                $("#navbar").addClass("is-fixed-top");
+                $("#navbartop").css("height","52px");
+            } else {
+                $("#navbar").removeClass("is-fixed-top");
+                $("#navbartop").css("height","0px");
+            }
+        });
+        $.ajax({
+            url: "https://server.grnscrnr.tk/local-guide-level",
+            success: function (result) {
+                var regexp = /<meta content="([^"]*) \| ([^"]*)" itemprop="description" property="og:description">/g;
+                var match = regexp.exec(result);
+                var regexp2 = /<meta content="Level (\d) Local Guide \| 1,574 Points" itemprop="description" property="og:description">/g;
+                var levelNumber = regexp2.exec(match[0])[1];
+                var badgeImage = "<i class='fas fa-circle'></i>";
+                switch (levelNumber) {
+                    case "4":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badge_level_four.png'>";
+                        break;
+                    case "5":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_five.png'>";
+                        break;
+                    case "6":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_six.png'>";
+                        break;
+                    case "7":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_seven.png'>";
+                        break;
+                    case "8":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_eight.png'>";
+                        break;
+                    case "9":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_nine.png'>";
+                        break;
+                    case "10":
+                        badgeImage = "<img src='//services.google.com/fh/files/helpcenter/points-badges_level_ten.png'>";
+                        break;
+                }
+                $("#localGuideIcon").html(badgeImage);
+                $("#localGuideText").html(match[1] + " with " + match[2] + ".");
+
+            },
+            method: "GET"
+        });
+    });
+</script>
+</body>
+</html>
