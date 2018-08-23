@@ -26,3 +26,14 @@ $link: $gslogogreen;
 ul.has-icons-left.is-size-5 > li {
   padding-bottom: 1.5rem;
 }
+.card.has-same-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  > .card-footer {
+    margin-top: auto;
+  }
+}
+.has-margin-top {
+  margin-top: 1rem;
+}

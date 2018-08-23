@@ -39,7 +39,7 @@
         <div class="navbar-end">
             <a href="#" class="navbar-item"> Top </a>
             <a href="#whatIDo" class="navbar-item"> What I do </a>
-            <a href="#" class="navbar-item"> Hello </a>
+            <a href="#whatIMade" class="navbar-item"> What I made </a>
             <a href="#" class="navbar-item"> Hello </a>
             <a href="#" class="navbar-item"> Hello </a>
             <a href="#" class="navbar-item"> Hello </a>
@@ -74,41 +74,102 @@
         </div>
     </div>
 </div>
-<div id="whatIveDone" class="section has-background-grey-lighter">
-    <div class="has-text-centered title"> What I've done </div>
+<div id="whatIMade" class="section has-background-grey-lighter">
+    <div class="has-text-centered title"> What I made </div>
     <div class="container">
         <div class="columns">
-            <div class="column is-3">
-                <div class="card">
+            <div class="column is-4">
+                <div class="card has-same-height">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            <img src="./images/screenshots/bashjs.png" alt="Screenshot">
                         </figure>
                     </div>
                     <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="./images/icons/bashjs.png" alt="Icon">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-size-4 is-marginless">Bash.js</p>
+                                <p class="subtitle is-size-6 is-marginless"><i class="fab fa-github"></i> <a href="https://github.com/Greenscreener/bashjs">/bashjs</a></p>
+                                <p class="subtitle is-size-6 is-marginless"><i class="fas fa-link"></i> <a href="http://bashjs.greenscreener.tk">bashjs.</a></p>
+                            </div>
+                        </div>
                         <div class="content">
-                            <p class="title is-size-4">Hello</p>
-                            <p class="subtitle is-size-6">World</p>
-                            <p>
-                                Shennanigans
-                            </p>
-                            <p>
-                                Lorem Ipsum Dolor Sit Amet.
-                            </p>
+                            <p> A website that behaves in a very simple way like a linux PC with bash. Contains basic commands, users, command history and even a "file" "system". </p>
 
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="column is-4">
+                <div class="card has-same-height">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="./images/screenshots/hlaskovnik.png" alt="Screenshot">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="./images/icons/hlaskovnik.png" alt="Icon">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-size-4 is-marginless">Hláškovník</p>
+                                <p class="subtitle is-size-6 is-marginless"><i class="fab fa-github"></i> Private, sorry </p>
+                                <p class="subtitle is-size-6 is-marginless"><i class="fas fa-link"></i> <a href="http://hlasky.greenscreener.tk">hlasky.</a></p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p> A website for writing, storing and sharing funny things teachers in our school say. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4">
+                <div class="card has-same-height">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="./images/screenshots/usbserialkeyboard.jpg" alt="Screenshot">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="./images/icons/usbserialkeyboard.png" alt="Icon">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-size-4 is-marginless">USBSerialKeyboard</p>
+                                <p class="subtitle is-size-6 is-marginless"><i class="fab fa-github"></i> <a href="https://github.com/Greenscreener/USBSerialKeyboard"> /USBSerialKeyboard </a></p>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <p>
+                                    A nifty little device, that can paste text from your phone's clipboard as HID input to a computer. Perfect for password managers.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    <div class="subtitle has- has-text-centered has-margin-top"> And more... </div>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>
-    $(document).ready(function () {
-        $(window).bind("scroll", function () {
-            if ($(window).scrollTop() > $("#navbartop").position().top) {
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+               $(document).ready(function () {
+               $(window).bind("scroll", function () {
+               if ($(window).scrollTop() > $("#navbartop").position().top) {
                 $("#navbar").addClass("is-fixed-top");
                 $("#navbartop").css("height","52px");
             } else {
@@ -121,7 +182,7 @@
             success: function (result) {
                 var regexp = /<meta content="([^"]*) \| ([^"]*)" itemprop="description" property="og:description">/g;
                 var match = regexp.exec(result);
-                var regexp2 = /<meta content="Level (\d) Local Guide \| 1,574 Points" itemprop="description" property="og:description">/g;
+                var regexp2 = /<meta content="Level (\d) Local Guide \| [\d,]{0,8} Points" itemprop="description" property="og:description">/g;
                 var levelNumber = regexp2.exec(match[0])[1];
                 var badgeImage = "<i class='fas fa-circle'></i>";
                 switch (levelNumber) {
