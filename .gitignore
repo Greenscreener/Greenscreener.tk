@@ -4,3 +4,4 @@ twitterApi/secrets.php
 twitterApi/twitteroauth
 firebase.json
 .firebaserc
+.firebase
