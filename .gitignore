@@ -1,2 +1,6 @@
 .idea
 bulma-0.7.1
+twitterApi/secrets.php
+twitterApi/twitteroauth
+firebase.json
+.firebaserc
