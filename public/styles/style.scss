@@ -37,3 +37,22 @@ ul.has-icons-left.is-size-5 > li {
 .has-margin-top {
   margin-top: 1rem;
 }
+a.is-darklink {
+  color: $primary;
+  &:hover {
+    color: $link;
+  }
+}
+.svg-litecoin {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.225em;
+  font-size: 1.33333em;
+}
+.has-text-small {
+  font-size: small;
+}
+.nobr {
+  white-space: nowrap;
+}

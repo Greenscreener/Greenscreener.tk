@@ -6366,4 +6366,22 @@ ul.has-icons-left.is-size-5 > li {
 .has-margin-top {
   margin-top: 1rem; }
 
+a.is-darklink {
+  color: #39c100; }
+  a.is-darklink:hover {
+    color: #486932; }
+
+.svg-litecoin {
+  display: inline-block;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.225em;
+  font-size: 1.33333em; }
+
+.has-text-small {
+  font-size: small; }
+
+.nobr {
+  white-space: nowrap; }
+
 /*# sourceMappingURL=style.css.map */
