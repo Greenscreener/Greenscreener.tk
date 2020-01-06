@@ -13,9 +13,12 @@
     <div class="hero-body">
         <div class="container has-text-centered">
             <!--<img src="./images/GSLOGO%20-%20white%20animated.svg" style="padding-bottom: 4rem;" alt="Logo" width="200px">-->
-            <object type="image/svg+xml" data="./images/GSLOGO-anim.svg" style="margin-bottom: 4rem;" class="logo-object">
-             GSLOGO   
-            </object>   
+            <svg id="gslogo" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 264.6 264.6" style="">
+              <g fill="none" stroke="#fff" stroke-width="14.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M107 119l-30 30s-19-14-30-30c-11-17-1-40 7-51L38 51a124 124 0 00-31 82c0 68 56 124 125 124a121 121 0 0094-48c12-19-2-52-44-28-41 24-64-15-35-40 11-10 19-14 19-14M147 76c-6-10-16-25-27-32-11-6-36-1-49 9L55 36S86 6 137 7c65 2 122 57 120 126 0 14-3 22-6 33" class="NLHtXcjK_0"></path>
+              </g>
+            <style data-made-with="vivus-instant">.NLHtXcjK_0{stroke-dasharray:1183 1185;stroke-dashoffset:1184;}.start .NLHtXcjK_0{animation:NLHtXcjK_draw 1700ms ease 0ms forwards;}@keyframes NLHtXcjK_draw{100%{stroke-dashoffset:0;}}@keyframes NLHtXcjK_fade{0%{stroke-opacity:1;}93.22033898305085%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>
+            
             <h1 class="title is-1">Hi there!</h1>
             <h2 class="subtitle is-3">Name's <span class="has-text-weight-bold">Greenscreener</span>, nice to meet you!
             </h2>
@@ -293,7 +296,7 @@
         <p>Made with <span class="fa"><i class="fas fa-heart"></i></span> by Greenscreener using <a href="https://bulma.io">Bulma</a>.</p>
         <p>"Inspired" by <a href="https://sijisu.tk">sijisu.tk</a>.</p>
         <p><a href="https://github.com/Greenscreener/Greenscreener.tk">Source code</a></p>
-        <p>Copyright &copy; <span id="currentYear">2019</span> Greenscreener</p>
+        <p>Copyright &copy; <span id="currentYear">2020</span> Greenscreener</p>
 
     </div>
 </div>
@@ -309,6 +312,9 @@
                 $("#navbartop").css("height", "0px");
             }
         });
+        setTimeout(() => {
+            $("#gslogo").addClass("start");
+        }, 300);
         document.getElementById("currentYear").innerText = new Date().getFullYear();
         $.ajax({
             url: "https://us-central1-gs-personal-page.cloudfunctions.net/localGuideInfo",
