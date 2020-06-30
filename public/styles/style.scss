@@ -5,7 +5,7 @@ $gsgreen: #39c100;
 $gslogogreen: #486932;
 
 $primary: $gsgreen;
-$link: $gslogogreen;
+$link: darken($primary, 10%);
 
 // Import Bulma
 @import "../bulma-0.7.1/bulma.sass";
@@ -59,4 +59,8 @@ a.is-darklink {
 }
 #gslogo {
   margin-bottom: 4rem;
+}
+
+#localGuideIcon {
+  filter: url(/images/filters.svg#wat) grayscale(100%) brightness(60%);
 }

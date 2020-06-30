@@ -1,0 +1,16 @@
+<svg width="100%" height="100%" viewBox="0 0 150 500" xmlns="http://www.w3.org/2000/svg">
+    <filter id="wat">
+        <feColorMatrix in="SourceGraphic"
+                       type="matrix"
+                       values="1 0 0 0 0
+                               0 1 0 0 0
+                               0 0 1 0 0
+                               0 0 -1 1 0" />
+    </filter>
+    <rect width="100" height="100" style="fill: orange; filter: url(#wat);">
+
+    </rect>
+    <rect x="100" width="100" height="100" style="fill: darkorange; filter: url(#wat);">
+
+    </rect>
+</svg>
