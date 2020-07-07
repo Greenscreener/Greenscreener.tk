@@ -2,7 +2,5 @@
 bulma-0.7.1
 twitterApi/secrets.php
 twitterApi/twitteroauth
-firebase.json
-.firebaserc
 .firebase
 public/libeopczep11.so
